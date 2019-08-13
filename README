@@ -1,0 +1,21 @@
+h2o-rpm
+---------
+A set of scripts to package h2o into an rpm. Skeleton borrowed from orientdb3-rpm which does the same thing.
+
+Setup
+-----
+    $ yum groupinstall "Development Tools"
+
+Building
+--------
+    $ make rpm H2O_VERSION="3.26.0" H2O_RELEASE="4765"
+
+
+Resulting RPM will be avaliable at $(shell pwd)
+
+Installing and operating
+------------------------
+    $ sudo yum install h2o*.rpm
+
+Libs, binaries, configs and logs are in /opt/h2o.
+
